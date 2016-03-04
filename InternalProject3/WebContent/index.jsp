@@ -10,6 +10,7 @@
 <body>
 <div>
 <h1 align="center">Dr.Paul Path's Lab</h1>
+<hr>
 </div>
 <div>
 	<ul>
@@ -19,13 +20,14 @@
 		<li>Help</li>
 	</ul>	
 </div>
+<hr>
 <h3 align="center">Login for Authorized User</h3>
-<form method="post" action="">
+<form method="post" action="ValidateUser.jsp">
 	<table border="2" align="center">
 		<tr>
 			<td><label>Role</label></td>
 			<td>
-			<select name="cars">
+			<select name="Roles">
 				  <option value="Admin">Administrator</option>
 				  <option value="Manager">Manager</option>
 				  <option value="LabTech">Lab Technician</option>

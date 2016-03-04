@@ -7,3 +7,25 @@ li{
 	display: inline;
 	padding-right: 15px;
 }
+.labcode{
+	text-align: right;
+	font-weight: bold;
+	font-size: 20px;
+}
+table{
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px solid black;
+}
+
+
+#testDetails  td{
+	width: 200px;
+	height: 20px;
+}
+thead{
+	font-weight: bold;
+}
+.thead{
+	font-weight: bold;
+}
