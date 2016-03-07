@@ -40,13 +40,13 @@ function getValues() {
 	var pAge = document.getElementById("pAge");
 	var pPhone = document.getElementById("pPhone");
 	var pEmail = document.getElementById("pEmail");
-	
+
 	request.onreadystatechange = function(response) {
 		if (request.readyState === 4) {
 			if (request.status === 200) {
 				var jsonOptions = JSON.parse(request.responseText);
 				jsonOptions.forEach(function(item) {
-					if(item.pCode == pCode.value){
+					if (item.pCode == pCode.value) {
 						pName.value = item.pName;
 						pAge.value = item.pAge;
 						pPhone.value = item.pPhone;
@@ -57,5 +57,27 @@ function getValues() {
 		}
 	}
 	request.open('GET', 'data/patients.json', true);
+	request.send();
+}
+
+function getName() {
+	var request = new XMLHttpRequest();
+	var docCode = document.getElementById("docCode");
+	var docName = document.getElementById("docName");
+	
+	request.onreadystatechange = function(response) {
+		if (request.readyState === 4) {
+			if (request.status === 200) {
+				var jsonOptions = JSON.parse(request.responseText);
+				jsonOptions.forEach(function(item) {
+					if (item.docCode == docCode.value) {
+						docName.value = item.docName;
+						
+					}
+				});
+			}
+		}
+	}
+	request.open('GET', 'data/doctors.json', true);
 	request.send();
 }

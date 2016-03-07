@@ -1,5 +1,25 @@
 [
-	{"pCode": "101","pName": "Ramesh Kumar","pAge": "29","pPhone": "9876543210","pEmail": "ramesh@gmail.com"},
-	{"pCode": "102","pName": "Rakesh Singh","pAge": "28","pPhone": "9999999990","pEmail": "rsingh@gmail.com"},
-	{"pCode": "103","pName": "Ram Kumar","pAge": "32","pPhone": "9876541234","pEmail": "rkumar@gmail.com"}
+	{
+		"pCode": "101",
+		"pName": "Ramesh Kumar",
+		"pAge": "29",
+		"pPhone": "9876543210",
+		"pEmail": "ramesh@gmail.com"
+	},
+
+	{
+		"pCode": "102",
+		"pName": "Rakesh Singh",
+		"pAge": "28",
+		"pPhone": "9999999990",
+		"pEmail": "rsingh@gmail.com"
+	},
+
+	{
+		"pCode": "103",
+		"pName": "Ram Kumar",
+		"pAge": "32",
+		"pPhone": "9876541234",
+		"pEmail": "rkumar@gmail.com"
+	}
 ]

@@ -66,7 +66,10 @@
 			</td>
 		</tr>
 		<tr>
-			<td colspan="2" style="padding: 20px 20px;"><input type="submit" value="Login" /></td>
+			<td colspan="2" style="padding: 20px 20px;">
+			<input class="btn" type="submit" value="Login" />
+			</td>
+			
 		</tr>
 	</table>
 </form>

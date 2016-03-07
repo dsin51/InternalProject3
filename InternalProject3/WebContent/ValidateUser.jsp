@@ -64,9 +64,9 @@
 	</tr>
 	<tr>
 		<td class="thead">Doctor Code</td>
-		<td><input type="text" name="dCode" /></td>
+		<td><input type="text" name="dCode" id="docCode" onkeyup="getName()" class="aligncenter"/></td>
 		<td colspan="2" class="thead">Doctor Name</td>
-		<td colspan="2"><input type="text" name="dName" /></td>
+		<td colspan="2"><input type="text" name="dName" id="docName" class="aligncenter"/></td>
 	</tr>
 </table>
 
@@ -104,9 +104,11 @@
 	</tbody>
 </table>
 
+<br>
 <center>
-<input type="button" value="Confirm Tests" onClick="TestOrder.jsp" />
+<input class="btn" type="button" value="Confirm Tests" onClick="TestOrder.jsp" />
 </center>
+
 
 </body>
 <script type="text/javascript" src="scripts/PatientAjax.js"></script>
