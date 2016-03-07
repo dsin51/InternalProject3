@@ -1,15 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Pathology Lab</title>
 <link rel="stylesheet" href="css/IndexStyles.css"/>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 </head>
 <body>
 <div>
-<h1 align="center">Dr.Paul Path's Lab</h1>
+<h1 align="center" style="color:#377D6A">Dr.Paul Path's Lab</h1>
 <hr>
 </div>
 <div>
@@ -37,21 +40,38 @@
 		</tr>
 		<tr>
 			<td><label>Lab Code</label></td>
-			<td><input type="text" name="labCode" /></td>
+			<td>
+				<datalist id="json-datalist"></datalist>
+				<input type="text" name="labCode" id="ajaxTextBox" list="json-datalist" placeholder="e.g. DL101" />
+			</td>
 		</tr>
 		<tr>
-			<td><label>Username</label></td>
-			<td><input type="text" name="username" /></td>
+			<td colspan="2">
+				<div class="row">
+				<span>
+				    <input class="gate" id="class" type="text" placeholder="Your Cool Name" />
+				    <label for="class">Username</label>
+				</span>
+				</div>
+			</td>
 		</tr>
 		<tr>
-			<td><label>Password</label></td>
-			<td><input type="password" name="pass" /></td>
+			<td colspan="2">
+				<div class="row">
+				<span>
+				    <input class="gate" id="class" type="password" placeholder="It's Secret" />
+				    <label for="class">Password</label>
+				</span>
+				</div>
+			</td>
 		</tr>
 		<tr>
-			<td colspan="2"><input type="submit" value="Login" /></td>
+			<td colspan="2" style="padding: 20px 20px;"><input type="submit" value="Login" /></td>
 		</tr>
 	</table>
 </form>
 
 </body>
+
+<script type="text/javascript" src="scripts/LoginAjax.js"></script>
 </html>

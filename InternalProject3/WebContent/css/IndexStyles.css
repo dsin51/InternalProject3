@@ -1,5 +1,8 @@
 @CHARSET "ISO-8859-1";
 
+.aligncenter{
+	text-align: center;
+}
 tr,td{
 	text-align: center;
 }
@@ -15,7 +18,7 @@ li{
 table{
 	margin-left: auto;
 	margin-right: auto;
-	border: 2px solid black;
+	border: 2px solid #377D6A;
 }
 
 
@@ -29,3 +32,135 @@ thead{
 .thead{
 	font-weight: bold;
 }
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,600,300,800);
+* {
+  box-sizing: border-box;
+}
+
+
+/*Text Box desgin */
+
+html,
+body {
+  overflow-x: hidden;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color: #377D6A;
+}
+
+.row {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 20px;  /* span padding */
+ 
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.row:before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: -5000px;
+  height: 100%;
+  width: 15000px;
+  z-index: -1;
+  background: inherit;
+}
+
+.row span {
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  /* top margin
+  >	margin: 30px 10px; 
+  */
+}
+
+
+
+.gate {
+  display: inline-block;
+  width: 215px;
+  padding: 10px 0 10px 15px;
+  font-family: "Open Sans", sans;
+  font-weight: 400;
+  color: #377D6A;
+  background: #efefef;
+  border: 0;
+  border-radius: 3px;
+  outline: 0;
+  text-indent: 95px;
+  transition: all .3s ease-in-out;
+}
+.gate::-webkit-input-placeholder {
+  color: #efefef;
+  text-indent: 0;
+  font-weight: 300;
+}
+.gate + label {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 15px;
+  text-shadow: 0 1px 0 rgba(19, 74, 70, 0.4);
+  background: #7AB893;
+  transition: all .4s ease-in-out;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  transform-origin: left bottom;
+  z-index: 99;
+}
+.gate + label:before, .gate + label:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 3px;
+  background: #377D6A;
+  transform-origin: left bottom;
+  transition: all .4s ease-in-out;
+  pointer-events: none;
+  z-index: -1;
+}
+.gate + label:before {
+  background: rgba(3, 36, 41, 0.2);
+  z-index: -2;
+  right: 20%;
+}
+
+span:nth-child(2) .gate {
+  text-indent: 85px;
+}
+
+
+.gate:focus,
+.gate:active {
+  color: #377D6A;
+  text-indent: 0;
+  background: #efefef;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.gate:focus::-webkit-input-placeholder,
+.gate:active::-webkit-input-placeholder {
+  color: #aaa;
+}
+.gate:focus + label,
+.gate:active + label {
+  transform: rotate(-66deg);
+  border-radius: 3px;
+}
+.gate:focus + label:before,
+.gate:active + label:before {
+  transform: rotate(10deg);
+}
+
+
+
+

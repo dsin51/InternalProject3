@@ -43,17 +43,20 @@
 	</tr>
 	<tr>
 		<td class="thead">Patient Code</td>
-		<td><input type="text" name="pCode" /></td>
+		<td>
+			<datalist id="json-datalist"></datalist>
+			<input type="text" name="pCode" id="pCode" list="json-datalist" onkeyup="getValues()" onblur="getValues()" class="aligncenter"/>
+		</td>
 		<td class="thead">Patient Name</td>
-		<td><input type="text" name="pName" /></td>
+		<td><input type="text" name="pName" id="pName" class="aligncenter" /></td>
 		<td class="thead">Age</td>
-		<td><input type="text" name="pAge" /></td>
+		<td><input type="text" name="pAge" id="pAge" class="aligncenter"/></td>
 	</tr>
 	<tr>
 		<td class="thead">Hand Phone</td>
-		<td><input type="tel" name="pPhone" /></td>
+		<td><input type="tel" name="pPhone" id="pPhone" class="aligncenter"/></td>
 		<td class="thead">Email</td>
-		<td><input type="email" name="pEmail" /></td>
+		<td><input type="email" name="pEmail" id="pEmail" class="aligncenter" /></td>
 		<td class="thead">Gender</td>
 		<td>Male<input type="radio" name="Gender" />
 			Female<input type="radio" name="Gender" />
@@ -101,6 +104,10 @@
 	</tbody>
 </table>
 
+<center>
+<input type="button" value="Confirm Tests" onClick="TestOrder.jsp" />
+</center>
 
 </body>
+<script type="text/javascript" src="scripts/PatientAjax.js"></script>
 </html>
