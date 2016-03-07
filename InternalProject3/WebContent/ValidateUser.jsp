@@ -89,25 +89,41 @@
 	<tbody>
 		<tr>
 			<td>
-				<datalist id="json-testlist"></datalist>
-				<input type="text" name="testCode" id="testCode" list="json-testlist" onkeyup="getTestDetails()" onblur="getTestDetails()" class="aligncenter" />
+				<datalist id="json-testlist-test0"></datalist>
+				<input type="text" name="testCode0" id="ajax_test0" list="json-testlist-test0" onkeyup="getTestDetails()" onblur="getTestDetails(0)" class="aligncenter" />
 			</td>
 			<td>
-				<input type="text" id="testName" class="aligncenter"/>
+				<input type="text" id="testName0" class="aligncenter"/>
 			</td>
 			<td>
-				<input type="text" id="testAmt" class="aligncenter"/>
+				<input type="text" id="testAmt0" class="aligncenter"/>
 			</td>
 		</tr>
 	</tbody>
 </table>
+<form>
+		<input type="hidden" value="0" id="rowCount">
+		<table id="answerTable">
 
+			<tr>
+				<td style="width: 173px">Total :</td>
+				<td style="width: 173px"></td>
+			</tr>
+			<tr>
+				<td style="width: 173px"><input type="button"
+					value="Add New Test" class="btn" id="addRow"></td>
+				<td style="width: 173px"><input type="button"
+					value="Confirm Tests" class="btn"></td>
+			</tr>
+		</table>
+	</form>
 <br>
+<!-- 
 <center>
 <input class="btn" type="button" value="Add New Test" onclick="AddTest.js" />
 <input class="btn" type="button" value="Confirm Tests" onclick="TestOrder.jsp" />
 </center>
-
+ -->
 
 </body>
 <script type="text/javascript" src="scripts/PatientAjax.js"></script>
