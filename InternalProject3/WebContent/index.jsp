@@ -25,7 +25,7 @@
 </div>
 <hr>
 <h3 align="center">Login for Authorized User</h3>
-<form method="post" action="ValidateUser.jsp">
+<form method="post" action="Authenticate">
 	<table border="2" align="center">
 		<tr>
 			<td><label>Role</label></td>
@@ -49,7 +49,7 @@
 			<td colspan="2">
 				<div class="row">
 				<span>
-				    <input class="gate" id="class" type="text" placeholder="Your Cool Name" />
+				    <input class="gate" id="name" name="name" type="text" placeholder="Your Cool Name" />
 				    <label for="class">Username</label>
 				</span>
 				</div>
@@ -59,7 +59,7 @@
 			<td colspan="2">
 				<div class="row">
 				<span>
-				    <input class="gate" id="class" type="password" placeholder="It's Secret" />
+				    <input class="gate" id="pass" name="pass" type="password" placeholder="It's Secret" />
 				    <label for="class">Password</label>
 				</span>
 				</div>

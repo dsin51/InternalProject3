@@ -5,6 +5,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="css/IndexStyles.css"/>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<c:if test="${sessionScope.user_session == null}">
+	<c:redirect url="index.jsp"></c:redirect>
+</c:if>
+
 <title>Pathology Lab</title>
 </head>
 <body>
@@ -82,34 +88,28 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-			<td></td>
+			<td>
+				<datalist id="json-testlist"></datalist>
+				<input type="text" name="testCode" id="testCode" list="json-testlist" onkeyup="getTestDetails()" onblur="getTestDetails()" class="aligncenter" />
+			</td>
+			<td>
+				<input type="text" id="testName" class="aligncenter"/>
+			</td>
+			<td>
+				<input type="text" id="testAmt" class="aligncenter"/>
+			</td>
 		</tr>
 	</tbody>
 </table>
 
 <br>
 <center>
-<input class="btn" type="button" value="Confirm Tests" onClick="TestOrder.jsp" />
+<input class="btn" type="button" value="Add New Test" onclick="AddTest.js" />
+<input class="btn" type="button" value="Confirm Tests" onclick="TestOrder.jsp" />
 </center>
 
 
 </body>
 <script type="text/javascript" src="scripts/PatientAjax.js"></script>
+<script type="text/javascript" src="scripts/TestAjax.js"></script>
 </html>

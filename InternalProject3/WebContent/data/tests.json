@@ -1,0 +1,13 @@
+[
+	{
+		"testCode": "BLDSGR",
+		"testName": "Blood Sugar Test",
+		"price": "250"
+	},
+
+	{
+		"testCode": "BLDCLS",
+		"testName": "Blood Cholestrol Test",
+		"price": "200"
+	}
+]
