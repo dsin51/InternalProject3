@@ -89,8 +89,8 @@
 	<tbody>
 		<tr>
 			<td>
-				<datalist id="json-testlist-test0"></datalist>
-				<input type="text" name="testCode0" id="ajax_test0" list="json-testlist-test0" onkeyup="getTestDetails()" onblur="getTestDetails(0)" class="aligncenter" />
+				<datalist id="json-datalist-test0"></datalist>
+				<input type="text" name="testCode0" id="ajax_test0" list="json-datalist-test0" onblur="fillTestDetails(0)" onkeyup="fillTestDetails(0)" class="aligncenter" />
 			</td>
 			<td>
 				<input type="text" id="testName0" class="aligncenter"/>
@@ -101,13 +101,14 @@
 		</tr>
 	</tbody>
 </table>
-<form>
+<br>
+	<form>
 		<input type="hidden" value="0" id="rowCount">
 		<table id="answerTable">
 
 			<tr>
 				<td style="width: 173px">Total :</td>
-				<td style="width: 173px"></td>
+				<td style="width: 173px"><label id="totalCost">0</label></td>
 			</tr>
 			<tr>
 				<td style="width: 173px"><input type="button"
@@ -127,5 +128,7 @@
 
 </body>
 <script type="text/javascript" src="scripts/PatientAjax.js"></script>
-<script type="text/javascript" src="scripts/TestAjax.js"></script>
+<script type="text/javascript" src="scripts/jquery-1.12.1.js"></script>
+<script type="text/javascript" src="scripts/populateTest.js"></script>
+
 </html>
