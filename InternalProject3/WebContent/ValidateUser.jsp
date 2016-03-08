@@ -28,7 +28,7 @@
 <hr>
 <div class="labcode">
 	<%
-		String labcode = request.getParameter("labCode");
+		String labcode = request.getParameter("ajaxTextBox");
 		out.println("Lab Code: ");
 	%>
 	<span class="labcode" style="color:red">
