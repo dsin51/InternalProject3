@@ -42,7 +42,7 @@
 			<td><label>Lab Code</label></td>
 			<td>
 				<datalist id="json-datalist"></datalist>
-				<input type="text" name="labCode" id="ajaxTextBox" list="json-datalist" placeholder="e.g. DL101" />
+				<input type="text" name="ajaxTextBox" id="ajaxTextBox" list="json-datalist" placeholder="e.g. DL101" />
 			</td>
 		</tr>
 		<tr>

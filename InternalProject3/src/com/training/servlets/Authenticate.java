@@ -44,16 +44,20 @@ public class Authenticate extends HttpServlet {
 		String name = request.getParameter("name");
 		String pwd = request.getParameter("pass");
 
+		String labcode = request.getParameter("ajaxTextBox");
+
 		String valid_name = "dhawal";
 		String valid_pwd = "dhawal123";
-		
+
 		HttpSession session = request.getSession();
 		session.setAttribute("user_session", name);
+		session.setAttribute("labcode", labcode);
 
 		if (name.equals(valid_name) && pwd.equals(valid_pwd)) {
 			// out.println("Valid User");
 			response.sendRedirect("ValidateUser.jsp");
 		} else {
+			out.println("lab Code:- " + labcode);
 			out.println("Invalid Credentials");
 			out.println(name);
 			out.println(pwd);

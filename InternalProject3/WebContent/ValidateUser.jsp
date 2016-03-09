@@ -27,12 +27,14 @@
 </div>
 <hr>
 <div class="labcode">
+	
 	<%
 		String labcode = request.getParameter("ajaxTextBox");
 		out.println("Lab Code: ");
+		
 	%>
 	<span class="labcode" style="color:red">
-		<%= labcode %>
+			<c:out value="${sessionScope.labcode}"></c:out>
 	</span>
 </div>
 
