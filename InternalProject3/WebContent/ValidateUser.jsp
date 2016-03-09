@@ -37,7 +37,7 @@
 			<c:out value="${sessionScope.labcode}"></c:out>
 	</span>
 </div>
-
+<form action="GenerateTestOrder.jsp">
 <table border="2">
 	<tr>
 		<td class="thead">Order Number</td>
@@ -104,7 +104,6 @@
 	</tbody>
 </table>
 <br>
-	<form>
 		<input type="hidden" value="0" id="rowCount">
 		<table id="answerTable">
 
@@ -115,11 +114,11 @@
 			<tr>
 				<td style="width: 173px"><input type="button"
 					value="Add New Test" class="btn" id="addRow"></td>
-				<td style="width: 173px"><input type="button"
-					value="Confirm Tests" class="btn"></td>
+				<td style="width: 173px"><input type="submit"
+					value="Confirm Tests" class="btn" id="generateTestOrder"></td>
 			</tr>
 		</table>
-	</form>
+</form>
 <br>
 <!-- 
 <center>
