@@ -104,7 +104,7 @@
 	</tbody>
 </table>
 <br>
-		<input type="hidden" value="0" id="rowCount">
+		<input type="hidden" value="0" id="rowCount" name="rowCount">
 		<table id="answerTable">
 
 			<tr>
