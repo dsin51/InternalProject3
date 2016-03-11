@@ -57,6 +57,11 @@
 
 <table id="testList" border="2" align="center">
 
+<%
+	//out.println("<tr><td><td></td></td></tr>");   --> Working
+	
+	
+%>
 
 </table>
 
