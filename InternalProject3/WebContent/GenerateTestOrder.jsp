@@ -1,3 +1,4 @@
+<%@page import="com.sun.xml.internal.txw2.Document"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -49,20 +50,41 @@
 <%
 	int count = Integer.parseInt(request.getParameter("rowCount"));
 	//out.println(count);
+	//int i =0;
+	//String id = "testCode" + i;
+	//String testCode = request.getParameter("testCode" + i);
+	//out.println(testCode);
+	
 	session.setAttribute("testCount", count);
+	
 	//out.println(session.getAttribute("testCount"));
 	
 %>
 <input type='hidden' id="count" value=<%=count+1 %> name='count' />
 
 <table id="testList" border="2" align="center">
-
-<%
+	<thead>
+	<tr>
+		<td>Test Code</td>
+		<td>Test Name</td>
+		<td>Price</td>
+	</tr>
+	</thead>
+	<tbody>
+	<%
+	//for(int i=0;i<4;i++)
 	//out.println("<tr><td><td></td></td></tr>");   --> Working
+	for(int i=0;i<=count;i++)
+	{
+		out.println("<tr>");
+		out.println("<td>"+request.getParameter("testCode"+i)+"</td>");
+		out.println("<td>"+request.getParameter("testName"+i)+"</td>");
+		out.println("<td>"+request.getParameter("testCost"+i)+"</td>");
+		out.println("</tr>");
+	}
 	
-	
-%>
-
+	%>
+	</tbody>
 </table>
 
 

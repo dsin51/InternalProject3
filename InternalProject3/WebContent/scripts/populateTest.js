@@ -20,7 +20,7 @@ $(document)
 												.append(
 														"<tr><td><datalist id='json-datalist-test"
 																+ count
-																+ "'></datalist> <input class='aligncenter' type='text' name='testCode'"
+																+ "'></datalist> <input class='aligncenter' type='text' name='testCode"
 																+ count
 																+ "'  id='ajax_test"
 																+ count
@@ -45,8 +45,8 @@ $(document)
 				});
 
 function testList(iter) {
-	console.log("json-datalist-test" + iter);
-	console.log("ajax_test" + iter);
+	//console.log("json-datalist-test" + iter);
+	console.log("testCode" + iter);
 
 	var dataList = document.getElementById("json-datalist-test" + iter);
 	var input = document.getElementById("ajax_test" + iter);

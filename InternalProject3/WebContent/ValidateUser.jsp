@@ -95,21 +95,21 @@
 				<input type="text" name="testCode0" id="ajax_test0" list="json-datalist-test0" onblur="fillTestDetails(0)" onkeyup="fillTestDetails(0)" class="aligncenter" />
 			</td>
 			<td>
-				<input type="text" id="testName0" class="aligncenter"/>
+				<input type="text" name="testName0" id="testName0" class="aligncenter"/>
 			</td>
 			<td>
-				<input type="text" id="testAmt0" class="aligncenter"/>
+				<input type="text" name="testCost0" id="testAmt0" class="aligncenter"/>
 			</td>
 		</tr>
 	</tbody>
 </table>
 <br>
-		<input type="hidden" value="0" id="rowCount" name="rowCount">
+		<input type="hidden" value="0" id="rowCount" name="rowCount" />
 		<table id="answerTable">
 
 			<tr>
 				<td style="width: 173px">Total :</td>
-				<td style="width: 173px"><label id="totalCost">0</label></td>
+				<td style="width: 173px"><label id="totalCost">0</label></td>	
 			</tr>
 			<tr>
 				<td style="width: 173px"><input type="button"
