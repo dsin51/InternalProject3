@@ -9,5 +9,17 @@
 		"testCode": "BLDCLS",
 		"testName": "Blood Cholestrol Test",
 		"price": "200"
+	},
+	
+	{
+		"testCode": "BLDPLT",
+		"testName": "Blood Pletelets Test",
+		"price": "150"
+	},
+	
+	{
+		"testCode": "BLDPLM",
+		"testName": "Blood Plasma (Vit B-12) Test",
+		"price": "200"	
 	}
 ]

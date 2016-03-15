@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 
-
+<link rel="stylesheet" href="css/IndexStyles.css"/>
 
 
 </head>
@@ -62,7 +62,7 @@
 %>
 <input type='hidden' id="count" value=<%=count+1 %> name='count' />
 
-<table id="testList" border="2" align="center">
+<table id="testList" border="2" align="center" class="aligncenter">
 	<thead>
 	<tr>
 		<td>Test Code</td>
@@ -74,19 +74,29 @@
 	<%
 	//for(int i=0;i<4;i++)
 	//out.println("<tr><td><td></td></td></tr>");   --> Working
+	int sum = 0;
 	for(int i=0;i<=count;i++)
 	{
 		out.println("<tr>");
-		out.println("<td>"+request.getParameter("testCode"+i)+"</td>");
-		out.println("<td>"+request.getParameter("testName"+i)+"</td>");
-		out.println("<td>"+request.getParameter("testCost"+i)+"</td>");
+		out.println("<td style='width: 173px'>"+request.getParameter("testCode"+i)+"</td>");
+		out.println("<td style='width: 173px'>"+request.getParameter("testName"+i)+"</td>");
+		out.println("<td style='width: 173px'>"+request.getParameter("testCost"+i)+"</td>");
 		out.println("</tr>");
+		sum += Integer.parseInt(request.getParameter("testCost"+i));
 	}
-	
 	%>
+	<tr>
+		<td style="width: 173px" colspan="2">Total Amount</td>
+		<td style="width: 173px"><b><%=sum %></b></td>
+	</tr>
 	</tbody>
 </table>
 
+<br><br><br><br><br><br><br>
+<hr id="foot">
+<center>
+<input type="button" id="print" name="print" class="btn" value="Print Order" onclick="printOrder()"/>
+</center>
 
 <!-- 
 <script type="text/javascript" src="scripts/jquery-1.12.1.js"></script>
